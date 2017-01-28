@@ -1,18 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_qrscan"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.nicrob64.bitcoinaddressmonitorwidget.ui.QRScanActivity">
 
-    <com.dlazaro66.qrcodereaderview.QRCodeReaderView
-        android:id="@+id/qrdecoderview"
+    <SurfaceView
+        android:id="@+id/camera_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+    
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/no_camera_permission_layout"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/no_camera_icon"
+            android:layout_centerHorizontal="true"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:layout_margin="@dimen/component_space"
+            app:srcCompat="@drawable/ic_camera_flat"/>
+
+        <TextView
+            android:id="@+id/no_camera_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/no_camera_icon"
+            android:layout_margin="@dimen/component_space"
+            android:layout_centerHorizontal="true"
+            style="@style/Base.TextAppearance.AppCompat.Headline"
+            android:text="@string/i_cant_see"/>
+
+        <Button
+            android:id="@+id/grant_permissions_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/no_camera_textview"
+            android:layout_margin="@dimen/component_space"
+            android:layout_centerHorizontal="true"
+            android:text="@string/grant_camera_permission"/>
+
+    </RelativeLayout>
 
 </RelativeLayout>

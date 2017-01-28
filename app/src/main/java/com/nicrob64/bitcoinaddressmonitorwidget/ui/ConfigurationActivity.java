@@ -38,6 +38,7 @@ public class ConfigurationActivity extends AppCompatActivity implements View.OnC
         mAddressListRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         mAddressListRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         mAddressAdapter = new AddressAdapter(mAddressList, this);
+        mAddressListRecyclerView.setAdapter(mAddressAdapter);
     }
 
     @Override
@@ -59,6 +60,9 @@ public class ConfigurationActivity extends AppCompatActivity implements View.OnC
         switch (requestCode){
             case QRScanActivity.REQUEST_QR_SCAN:
                 String scannedAddress = data.getStringExtra(QRScanActivity.KEY_RESULT);
+                if(scannedAddress.startsWith("bitcoin:")){
+                    scannedAddress = scannedAddress.substring("bitcoin:".length());
+                }
                 if(!mAddressList.contains(scannedAddress)) {
                     mAddressList.add(scannedAddress);
                     mAddressAdapter.notifyItemInserted(mAddressList.size()-1);

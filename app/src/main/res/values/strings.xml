@@ -77,4 +77,6 @@
     <string name="ok">Ok</string>
     <string name="whoops">Whoops!</string>
     <string name="already_added_address_s">Already added address \"%s\"</string>
+    <string name="i_cant_see">I can\'t see!</string>
+    <string name="grant_camera_permission">Grant camera permission</string>
 </resources>
