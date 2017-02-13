@@ -14,8 +14,11 @@
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:layout_height="200dp"
-        android:maxHeight="200dp">
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:maxHeight="200dp"
+        tools:layout_height="200dp">
 
     </android.support.v7.widget.RecyclerView>
 
@@ -23,8 +26,26 @@
         android:id="@+id/add_another_address_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/scan_qr_code"
-        android:layout_below="@id/recycler_view"
-        android:layout_centerHorizontal="true"/>
+        android:layout_below="@+id/recycler_view"
+        android:layout_centerHorizontal="true"
+        android:text="@string/scan_qr_code" />
+
+    <TextView
+        android:id="@+id/exchange_rate_header"
+        android:layout_below="@+id/add_another_address_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/show_rates"
+        style="@style/Base.TextAppearance.AppCompat.Headline"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/exchange_rate_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/exchange_rate_header"
+        android:maxHeight="200dp"
+        tools:layout_height="200dp">
+    </android.support.v7.widget.RecyclerView>
+
 
 </RelativeLayout>

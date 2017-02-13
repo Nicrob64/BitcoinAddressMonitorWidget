@@ -6,5 +6,6 @@
     android:initialLayout="@layout/address_monitor_small"
     android:configure="com.nicrob64.bitcoinaddressmonitorwidget.ui.ConfigurationActivity"
     android:resizeMode="horizontal|vertical"
+    android:previewImage="@drawable/preview"
     android:widgetCategory="home_screen">
 </appwidget-provider>
