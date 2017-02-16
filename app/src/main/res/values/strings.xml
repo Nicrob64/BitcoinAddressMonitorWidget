@@ -73,11 +73,19 @@
     <string name="pref_ringtone_silent">Silent</string>
 
     <string name="pref_title_vibrate">Vibrate</string>
-    <string name="scan_qr_code">Scan QR Address</string>
+    <string name="scan_qr_code">Scan QR code</string>
     <string name="ok">Ok</string>
     <string name="whoops">Whoops!</string>
     <string name="already_added_address_s">Already added address \"%s\"</string>
     <string name="i_cant_see">I can\'t see!</string>
     <string name="grant_camera_permission">Grant camera permission</string>
     <string name="show_rates">Show exchange rates</string>
+    <string name="add_manual">Add manually</string>
+    <string name="address_help">Help</string>
+
+
+    <string name="adding_address_help_description_intro">This app can handle regular bitcoin addresses and xpub addresses. You can enter the addresses manually or scan the QR codes.</string>
+    <string name="adding_address_help_description_xpub_title">What is an xpub?</string>
+    <string name="adding_address_help_description_xpub_description">An xpub (extended public key) can be used to monitor all addresses of your HD wallet, instead of entering individual addresses. Check below for how to find your xpub in a range of common wallets:</string>
+    <string name="help_address_title">Address type support</string>
 </resources>

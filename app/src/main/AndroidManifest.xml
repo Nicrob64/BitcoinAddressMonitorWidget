@@ -28,6 +28,11 @@
             android:name=".ui.QRScanActivity"
             android:screenOrientation="portrait"/>
 
+        <activity
+            android:name=".ui.HelpAddAddressActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
 
         <receiver android:name=".ui.BitcoinAddressMonitorWidgetProvider">
             <intent-filter>

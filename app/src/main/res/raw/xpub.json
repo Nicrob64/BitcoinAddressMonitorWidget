@@ -1,0 +1,34 @@
+[
+  {
+    "title" : "Electrum 2.x",
+    "description" : "Wallet > Master Public Keys"
+  },
+  {
+    "title" : "Mycelium",
+    "description" : "Accounts > Select account > Select Export from Menu > Show Public"
+  },
+  {
+    "title" : "myTREZOR",
+    "description" : "Basic settings > Show XPUBs"
+  },
+  {
+    "title" : "Blockchain.info",
+    "description" : "Settings > Addresses > Show xPub > Continue"
+  },
+  {
+    "title" : "Copay.io",
+    "description" : "Settings > Advanced > Wallet Information > EXTENDED PUBLIC KEYS"
+  },
+  {
+    "title" : "Ledger",
+    "description" : "Chrome Extension > Select Account > Account Settings > Extended public key > Export"
+  },
+  {
+    "title" : "Airbitz",
+    "description" : "Transactions screen > 3 dots > Export > Wallet Public Seed (XPub) > View or Save"
+  },
+  {
+    "title" : "Bitcoin Wallet (Android)",
+    "description" : "3 dots > Settings > Diagnostics > Show xpub > Share to clipboard, email"
+  }
+]

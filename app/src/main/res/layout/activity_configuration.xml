@@ -19,20 +19,41 @@
         android:layout_alignParentTop="true"
         android:maxHeight="200dp"
         tools:layout_height="200dp">
-
     </android.support.v7.widget.RecyclerView>
 
-    <Button
-        android:id="@+id/add_another_address_button"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/add_address_layout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:layout_below="@+id/recycler_view"
-        android:layout_centerHorizontal="true"
-        android:text="@string/scan_qr_code" />
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/add_another_address_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/scan_qr_code" />
+
+        <Button
+            android:id="@+id/add_another_address_button_manual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_manual" />
+
+        <Button
+            android:id="@+id/help_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/address_help" />
+
+    </LinearLayout>
+
+
 
     <TextView
         android:id="@+id/exchange_rate_header"
-        android:layout_below="@+id/add_another_address_button"
+        android:layout_below="@+id/add_address_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/show_rates"
@@ -42,9 +63,11 @@
         android:id="@+id/exchange_rate_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/exchange_rate_header"
         android:maxHeight="200dp"
-        tools:layout_height="200dp">
+        tools:layout_height="200dp"
+        android:layout_below="@+id/exchange_rate_header"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
     </android.support.v7.widget.RecyclerView>
 
 
